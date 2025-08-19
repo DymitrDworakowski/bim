@@ -2,6 +2,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
+function handleClick() {
+    alert('You clicked me!');
+  }
+
 const Basic = () => (
   <div>
     <Formik
@@ -30,7 +34,7 @@ const Basic = () => (
           <ErrorMessage name="email" component="div" />
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="div" />
-          <button type="submit" disabled={isSubmitting}>
+          <button type="submit" disabled={isSubmitting} onClick={handleClick}>
             Submit
           </button>
         </Form>
