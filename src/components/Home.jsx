@@ -1,12 +1,12 @@
 import React from "react";
-
-
-function Home () {
-    return(
+import imgBim from "../images/06.jpg"
+function Home() {
+  return (
     <div>
-        <h1>Hello</h1>
+      <img src={imgBim} alt="BIM" width={200} height={90}/>
+      <h1>Hello</h1>
     </div>
-    );
+  );
 }
 
-export default Home
+export default Home;
