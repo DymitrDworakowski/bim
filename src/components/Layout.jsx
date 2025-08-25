@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import styled from "styled-components";
+import Footer from "./Footer.jsx";
 const StyledLink = styled(NavLink)`
   color: black;
 
@@ -19,8 +20,10 @@ function Layout() {
         <StyledLink to="/test">Test</StyledLink>
         <StyledLink to="/courses">Szkolenia</StyledLink>
       </nav>
-      <Suspense fallback={<div>Loading...</div>}></Suspense>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
+      <Footer />
     </section>
   );
 }
