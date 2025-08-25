@@ -1,10 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import Modal from "./Modal";
-import CourseList from "./CoursesList";
-import imgBim from "../images/06.jpg";
-
-function Home() {
+import { React, useState } from "react";
+import Modal from "../components/Modal";
+import CourseList from "../components/CoursesList";
+import { courses } from "../data/courses";
+function Courses() {
   const [showModal, setShowModal] = useState(false);
 
   function handleOpenModal() {
@@ -13,9 +11,8 @@ function Home() {
 
   return (
     <div>
-      <img src={imgBim} alt="BIM" width={200} height={90} />
-      <h1>Hello</h1>
-      <CourseList />
+      Courses
+      <CourseList courses={courses} />
       {!showModal && (
         <button onClick={handleOpenModal}>Zostaw swój kontakt</button>
       )}
@@ -24,4 +21,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Courses;

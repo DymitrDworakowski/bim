@@ -1,17 +1,25 @@
 import "./App.css";
-import NavBar from "./components/NavBar.jsx";
-import Home from "./components/Home.jsx";
-import Test from "./components/Test.jsx";
+import { Routes, Route } from "react-router-dom";
+import { lazy } from "react";
+import Layout from "./components/Layout.jsx";
 
+const Home = lazy(() => import("./pages/Home"));
+const Test = lazy(() => import("./components/Test.jsx"));
+const Courses = lazy(() => import("./pages/Courses.jsx"));
+const CoursesDetails = lazy(() => import("./pages/CoursesDetails.jsx"));
+//
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Home />
-      
-      <Test />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="test" element={<Test />} />
+        <Route path="courses" element={<Courses />} />
+        <Route path="courses/:id" element={<CoursesDetails />} />
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 
