@@ -8,6 +8,7 @@ const StyledLink = styled(NavLink)`
   color: black;
 
   &.active {
+    font-weight: bold;
     color: orange;
   }
 `;
@@ -16,17 +17,20 @@ function Layout() {
   return (
     <div>
       <nav>
-        <div className="flex flex-col md:flex-row gap-5 bg-gray-800 p-8 ">
+        <div className="flex  md:flex-row   p-8 justify-evenly border-b-2 border-orange-500 items-center">
           <NavLink to="/" end className="text-white text-xl font-bold">
             <img src={imgBim} alt="BIM" width={200} height={90} />
           </NavLink>
+          <h1 className="uppercase text-orange-500 font-bold text-2xl">
+            Learn & Share
+          </h1>
         </div>
-        <div className="flex justify-center flex-col md:flex-row gap-5  p-4">
+        <div className=" uppercase text-orange-500 flex justify-center flex-col md:flex-row gap-5  p-4">
           <StyledLink to="/" end>
-            Home
+            Strona główna
           </StyledLink>
-          <StyledLink to="/test">Test</StyledLink>
           <StyledLink to="/courses">Szkolenia</StyledLink>
+          <StyledLink to="/test">Test</StyledLink>
         </div>
       </nav>
       <section className="p-4 md:p-8 lg:p-12">

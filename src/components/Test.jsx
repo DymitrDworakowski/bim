@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useRef } from "react";
+// import { useRef } from "react";
 const products = [
   { id: 1, name: "Bread", price: 10 },
   { id: 2, name: "Milk", price: 15 },
   { id: 3, name: "Cheese", price: 20 },
+  { id: 4, name: "Meat", price: 20 },
 ];
 
 // Зроби новий масив, де ціна кожного товару збільшена на 10%.
@@ -16,6 +17,10 @@ function Test() {
 const [produ, setProdu] = useState(products)
 
 
+function deleteItems(id) {
+    const prod = produ.filter(p => p.id !== id)
+    setProdu(prod)
+}
 
 
 function addPrice(id) {
@@ -65,12 +70,13 @@ console.log(produ)
           <h4 key={pro.id}>{pro.name}</h4>
           <p>{pro.price}</p>
           <button onClick={() => addPrice(pro.id)}>Add</button>
+          <button onClick={() => deleteItems(pro.id)}>Delete</button>
           <input type="checkbox" onClick={() => addInStock(pro.id)} />
         </ul>
         
       ))}
       
-<div class="text-xl font-bold text-blue-600">Привіт, Tailwind!</div>
+{/* <div class="text-xl font-bold text-blue-600">Привіт, Tailwind!</div>
 
 
 <div class="p-4 m-2">Контент з відступами</div>
@@ -99,7 +105,7 @@ console.log(produ)
             <a href="#" class="text-white hover:text-gray-300">Контакти</a>
         </div>
     </div>
-</nav>
+</nav> */}
     </>
   );
 }
