@@ -11,6 +11,10 @@ const StyledLink = styled(NavLink)`
     font-weight: bold;
     color: orange;
   }
+  &:hover {
+    text-shadow: 0 2px 8px rgba(250, 150, 0, 0.7);
+    
+  }
 `;
 
 function Layout() {
@@ -25,7 +29,7 @@ function Layout() {
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-orange-500 flex justify-center flex-col md:flex-row gap-5  p-4">
+        <div className=" uppercase text-orange-500 flex justify-center flex-col md:flex-row gap-5  p-4 ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
