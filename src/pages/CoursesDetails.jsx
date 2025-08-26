@@ -1,9 +1,16 @@
 import { useParams } from "react-router-dom";
 import { getCourseById } from "../data/courses";
-
+import { React, useState } from "react";
+import Modal from "../components/Modal";
 function CoursesDetails() {
   const { id } = useParams();
   const courses = getCourseById(id);
+
+  const [showModal, setShowModal] = useState(false);
+
+  function handleOpenModal() {
+    setShowModal(true);
+  }
 
   return (
     <main className="min-h-[60vh] bg-gray-50 flex flex-col items-center justify-start py-8">
@@ -25,6 +32,15 @@ function CoursesDetails() {
           praesentium ipsum quos unde voluptatum?
         </p>
       </div>
+      {!showModal && (
+        <button
+          onClick={handleOpenModal}
+          className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow transition-colors"
+        >
+          Zostaw swój kontakt
+        </button>
+      )}
+      {showModal && <Modal setShowModal={setShowModal} />}
     </main>
   );
 }

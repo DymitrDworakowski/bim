@@ -12,8 +12,7 @@ const StyledLink = styled(NavLink)`
     color: orange;
   }
   &:hover {
-    text-shadow: 0 2px 8px rgba(250, 150, 0, 0.7);
-    
+    text-shadow: 0 2px 8px rgba(231, 14, 14, 0.7);
   }
 `;
 
