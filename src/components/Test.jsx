@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 // import { useRef } from "react";
 const products = [
   { id: 1, name: "Bread", price: 10 },
@@ -52,16 +53,45 @@ function Test() {
     setProdu(prod);
   }
 
+  const Input = styled.input`
+  position: relative;
+  left: 13px;
+  top: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition:
+  transform 0.3s ease,color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
+
+  &:focus{
+  transform: translateY(-20px);
+  color: orange;}
+
+  &focus: {
+    color: orange;
+`;
+
+  const Label = styled.label`
+    &:focus {
+      transform: translateY(-20px);
+      color: orange;
+    }
+  `;
+
   return (
     <>
+      <Label htmlFor="\">
+        <Input type="text" placeholder="First name" />
+      </Label>
+
       <h1>Product</h1>
-      <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
+      {/* <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
 <div className="text-[#fa9600]">Фон помаранчевим кольором</div>
 <div className="border border-custom-orange">Рамка помаранчевим кольором</div>
 <div className="text-custom-orange">Текст з напівпрозорим кольором</div>
 <div className="text-red-500 bg-blue-200 p-4">
     Тест стандартних кольорів Tailwind
-</div>
+</div> */}
 
       {produ.map((pro) => (
         <ul>

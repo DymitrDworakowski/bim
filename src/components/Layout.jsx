@@ -28,7 +28,7 @@ function Layout() {
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl p-4 ">
+        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl gap-3 p-4 ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
