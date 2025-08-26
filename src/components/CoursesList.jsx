@@ -16,36 +16,36 @@ function CoursesList({ courses }) {
         {courses.map(({ id, name, description, price, date, hours, form }) => (
           <li
             key={id}
-            className="uppercase border border-orange-500 p-4 rounded-lg hover:bg-blue-50 transition-colors flex flex-col w-full min-h-[400px] h-full"
+            className="uppercase border border-[rgb(250,150,0)] p-4 rounded-lg hover:bg-blue-50 transition-colors flex flex-col w-full min-h-[400px] h-full"
           >
             <div className="flex gap-1 items-center mb-4 mt-4">
               <img src={Logo} alt="BIM" width={100} height={90} />
-              <p className="font-semibold text-orange-500">{name}</p>
+              <p className="font-semibold text-[rgb(250,150,0)]">{name}</p>
             </div>
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-                <p className="text-sm text-orange-500">{description}</p>
-                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                <span className="w-1.5 h-1.5 bg-[rgb(250,150,0)] rounded-full"></span>
+                <p className="text-sm text-[rgb(250,150,0)]">{description}</p>
+                <span className="w-1.5 h-1.5 bg-[rgb(250,150,0)] rounded-full"></span>
               </div>
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-sm text-black-500 font-bold">
-                Forma szkolenia: <span className="text-orange-500">{form}</span>
+                Forma szkolenia: <span className="text-[rgb(250,150,0)]">{form}</span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Termin: <span className="text-orange-500">{date}</span>
+                Termin: <span className="text-[rgb(250,150,0)]">{date}</span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Czas trwania: <span className="text-orange-500">{hours}</span>
+                Czas trwania: <span className="text-[rgb(250,150,0)]">{hours}</span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Cena: <span className="text-orange-500">{price} PLN</span>
+                Cena: <span className="text-[rgb(250,150,0)]">{price} PLN</span>
               </p>
             </div>
             <div className="flex-grow" />
             <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
-              <button className="uppercase bg-orange-500 hover:bg-blue-700 text-black font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
+              <button className="uppercase bg-[rgb(250,150,0)] hover:bg-blue-700 text-black font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się wiecej
                 <ArrowRight className="w-12 h-12" />
               </button>

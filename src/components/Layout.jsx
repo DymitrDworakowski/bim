@@ -12,7 +12,7 @@ const StyledLink = styled(NavLink)`
     color: orange;
   }
   &:hover {
-    text-shadow: 0 2px 8px rgba(231, 14, 14, 0.7);
+    text-shadow: 0 2px 8px rgba(250, 150, 0, 0.7);
   }
 `;
 
@@ -20,15 +20,15 @@ function Layout() {
   return (
     <div>
       <nav>
-        <div className="flex md:flex-row p-8 justify-evenly border-b-2 border-orange-500 items-end">
+        <div className="flex md:flex-row p-3 justify-evenly border-b-2 border-[rgb(250,150,0)] items-end">
           <NavLink to="/" end>
             <img src={imgBim} alt="BIM" width={400} height={90} />
           </NavLink>
-          <h1 className="uppercase text-orange-500 font-bold text-4xl self-end">
+          <h1 className="uppercase text-[rgb(250,150,0)] font-bold text-4xl self-end">
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-orange-500 flex justify-evenly flex-col md:flex-row text-3xl p-4 ">
+        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl p-4 ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>

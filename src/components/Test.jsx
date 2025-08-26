@@ -58,7 +58,7 @@ function Test() {
       <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
 <div className="text-[#fa9600]">Фон помаранчевим кольором</div>
 <div className="border border-custom-orange">Рамка помаранчевим кольором</div>
-<div className="text-custom-orange-rgba">Текст з напівпрозорим кольором</div>
+<div className="text-custom-orange">Текст з напівпрозорим кольором</div>
 <div className="text-red-500 bg-blue-200 p-4">
     Тест стандартних кольорів Tailwind
 </div>
