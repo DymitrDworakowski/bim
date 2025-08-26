@@ -7,7 +7,7 @@ export const courses = [
     description: "Nauka Revit od podstaw.",
     price: 499,
     date: "Kontakt z działem szkoleń",
-    howers: "32 godziny",
+    hours: "32 godziny",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const courses = [
     description: "Kurs zaawansowany.",
     price: 599,
     date: "Kontakt z działem szkoleń",
-    howers: "32 godziny",
+    hours: "32 godziny",
   },
   // {
   //   id: 3,
@@ -37,7 +37,7 @@ export const courses = [
     description: "Dodatki pyrevit diroots",
     price: 199,
     date: "Kontakt z działem szkoleń",
-    howers: "2 godziny",
+    hours: "2 godziny",
   },
   // {
   //   id: 5,

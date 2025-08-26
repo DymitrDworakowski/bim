@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import styled from "styled-components";
 import Footer from "./Footer.jsx";
-import imgBim from "../images/06.jpg";
+import imgBim from "../images/LOGO.png";
 
 const StyledLink = styled(NavLink)`
   color: black;

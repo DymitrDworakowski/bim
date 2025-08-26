@@ -13,38 +13,40 @@ function CoursesList({ courses }) {
   return (
     <div className="mx-auto p-8 mt-8">
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
-        {courses.map(({ id, name, description, price, date, howers, form }) => (
-          <div
+        {courses.map(({ id, name, description, price, date, hours, form }) => (
+          <li
             key={id}
-            className="uppercase border border-orange-500 p-4 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer flex flex-col justify-between w-full h-96"
+            className="uppercase border border-orange-500 p-4 rounded-lg hover:bg-blue-50 transition-colors flex flex-col w-full min-h-[400px] h-full"
           >
-            <div className="flex  gap-3 items-center mb-4">
+            <div className="flex gap-1 items-center mb-4 mt-4">
               <img src={Logo} alt="BIM" width={100} height={90} />
               <p className="font-semibold text-orange-500">{name}</p>
             </div>
-
-            <li>
+            <div className="flex flex-col items-center mb-8">
               <p className="text-sm text-orange-500">*{description}*</p>
-              <p className="text-sm text-black-500">
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-sm text-black-500 font-bold">
                 Forma szkolenia: <span className="text-orange-500">{form}</span>
               </p>
-              <p className="text-sm text-black-500">
+              <p className="text-sm text-black-500 font-bold">
                 Termin: <span className="text-orange-500">{date}</span>
               </p>
-              <p className="text-sm text-black-500">
-                Czas trwania: <span className="text-orange-500">{howers}</span>
+              <p className="text-sm text-black-500 font-bold">
+                Czas trwania: <span className="text-orange-500">{hours}</span>
               </p>
               <p className="text-sm text-black-500 font-bold">
                 Cena: <span className="text-orange-500">{price} PLN</span>
               </p>
-              <Link to={`${id}`}>
-                <button className="mt-8 bg-orange-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
-                  Dowiedz się wiecej
-                  <ArrowRight className="w-12 h-12" />
-                </button>
-              </Link>
-            </li>
-          </div>
+            </div>
+            <div className="flex-grow" />
+            <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
+              <button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
+                Dowiedz się wiecej
+                <ArrowRight className="w-12 h-12" />
+              </button>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
