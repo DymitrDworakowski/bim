@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.2d73b588.css",
+    "main.js": "/your-repo-name/static/js/main.0d740cbc.js",
+    "static/js/264.5845ed1e.chunk.js": "/your-repo-name/static/js/264.5845ed1e.chunk.js",
+    "static/js/411.a1eebf30.chunk.js": "/your-repo-name/static/js/411.a1eebf30.chunk.js",
+    "static/js/693.5d1c1643.chunk.js": "/your-repo-name/static/js/693.5d1c1643.chunk.js",
+    "static/js/391.c8104f3d.chunk.js": "/your-repo-name/static/js/391.c8104f3d.chunk.js",
+    "static/js/994.07818a15.chunk.js": "/your-repo-name/static/js/994.07818a15.chunk.js",
+    "static/js/892.e76f2100.chunk.js": "/your-repo-name/static/js/892.e76f2100.chunk.js",
+    "static/media/LOGO.png": "/your-repo-name/static/media/LOGO.3b7600ad9d0191cd0ad9.png",
+    "index.html": "/your-repo-name/index.html",
+    "static/media/Strzalka.svg": "/your-repo-name/static/media/Strzalka.c3ae6562a46409318409740f99a281ec.svg",
+    "main.2d73b588.css.map": "/your-repo-name/static/css/main.2d73b588.css.map",
+    "main.0d740cbc.js.map": "/your-repo-name/static/js/main.0d740cbc.js.map",
+    "264.5845ed1e.chunk.js.map": "/your-repo-name/static/js/264.5845ed1e.chunk.js.map",
+    "411.a1eebf30.chunk.js.map": "/your-repo-name/static/js/411.a1eebf30.chunk.js.map",
+    "693.5d1c1643.chunk.js.map": "/your-repo-name/static/js/693.5d1c1643.chunk.js.map",
+    "391.c8104f3d.chunk.js.map": "/your-repo-name/static/js/391.c8104f3d.chunk.js.map",
+    "994.07818a15.chunk.js.map": "/your-repo-name/static/js/994.07818a15.chunk.js.map",
+    "892.e76f2100.chunk.js.map": "/your-repo-name/static/js/892.e76f2100.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d73b588.css",
+    "static/js/main.0d740cbc.js"
+  ]
+}
