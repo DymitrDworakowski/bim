@@ -20,11 +20,11 @@ function Layout() {
   return (
     <div>
       <nav>
-        <div className="flex  md:flex-row   p-8 justify-evenly border-b-2 border-orange-500 items-center">
-          <NavLink to="/" end className="text-white text-xl font-bold">
-            <img src={imgBim} alt="BIM" width={200} height={90} />
+        <div className="flex md:flex-row p-8 justify-evenly border-b-2 border-orange-500 items-end">
+          <NavLink to="/" end >
+            <img src={imgBim} alt="BIM" width={400} height={90} />
           </NavLink>
-          <h1 className="uppercase text-orange-500 font-bold text-2xl">
+          <h1 className="uppercase text-orange-500 font-bold text-4xl self-end">
             Learn & Share
           </h1>
         </div>
