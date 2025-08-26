@@ -45,7 +45,7 @@ function CoursesList({ courses }) {
             </div>
             <div className="flex-grow" />
             <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
-              <button className="bg-orange-500 hover:bg-blue-700 text-black font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
+              <button className="uppercase bg-orange-500 hover:bg-blue-700 text-black font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się wiecej
                 <ArrowRight className="w-12 h-12" />
               </button>

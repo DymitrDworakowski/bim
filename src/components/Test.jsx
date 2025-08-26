@@ -55,12 +55,13 @@ function Test() {
   return (
     <>
       <h1>Product</h1>
-      <div>
-        <h1 className="font-poppins text-3xl font-bold text-blue-600">
-          Це Poppins
-        </h1>
-        <p className="font-montserrat text-gray-700">Це Montserrat</p>
-      </div>
+      <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
+<div className="text-[#fa9600]">Фон помаранчевим кольором</div>
+<div className="border border-custom-orange">Рамка помаранчевим кольором</div>
+<div className="text-custom-orange-rgba">Текст з напівпрозорим кольором</div>
+<div className="text-red-500 bg-blue-200 p-4">
+    Тест стандартних кольорів Tailwind
+</div>
 
       {produ.map((pro) => (
         <ul>
