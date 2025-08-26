@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/bim/static/css/main.2d73b588.css",
-    "main.js": "/bim/static/js/main.b9d23b0a.js",
+    "main.js": "/bim/static/js/main.7435a014.js",
     "static/js/264.5845ed1e.chunk.js": "/bim/static/js/264.5845ed1e.chunk.js",
-    "static/js/411.a1eebf30.chunk.js": "/bim/static/js/411.a1eebf30.chunk.js",
-    "static/js/693.5d1c1643.chunk.js": "/bim/static/js/693.5d1c1643.chunk.js",
+    "static/js/411.cacdf6d4.chunk.js": "/bim/static/js/411.cacdf6d4.chunk.js",
+    "static/js/693.3705c467.chunk.js": "/bim/static/js/693.3705c467.chunk.js",
     "static/js/391.c8104f3d.chunk.js": "/bim/static/js/391.c8104f3d.chunk.js",
     "static/js/994.07818a15.chunk.js": "/bim/static/js/994.07818a15.chunk.js",
     "static/js/892.e76f2100.chunk.js": "/bim/static/js/892.e76f2100.chunk.js",
@@ -12,16 +12,16 @@
     "index.html": "/bim/index.html",
     "static/media/Strzalka.svg": "/bim/static/media/Strzalka.c3ae6562a46409318409740f99a281ec.svg",
     "main.2d73b588.css.map": "/bim/static/css/main.2d73b588.css.map",
-    "main.b9d23b0a.js.map": "/bim/static/js/main.b9d23b0a.js.map",
+    "main.7435a014.js.map": "/bim/static/js/main.7435a014.js.map",
     "264.5845ed1e.chunk.js.map": "/bim/static/js/264.5845ed1e.chunk.js.map",
-    "411.a1eebf30.chunk.js.map": "/bim/static/js/411.a1eebf30.chunk.js.map",
-    "693.5d1c1643.chunk.js.map": "/bim/static/js/693.5d1c1643.chunk.js.map",
+    "411.cacdf6d4.chunk.js.map": "/bim/static/js/411.cacdf6d4.chunk.js.map",
+    "693.3705c467.chunk.js.map": "/bim/static/js/693.3705c467.chunk.js.map",
     "391.c8104f3d.chunk.js.map": "/bim/static/js/391.c8104f3d.chunk.js.map",
     "994.07818a15.chunk.js.map": "/bim/static/js/994.07818a15.chunk.js.map",
     "892.e76f2100.chunk.js.map": "/bim/static/js/892.e76f2100.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d73b588.css",
-    "static/js/main.b9d23b0a.js"
+    "static/js/main.7435a014.js"
   ]
 }
