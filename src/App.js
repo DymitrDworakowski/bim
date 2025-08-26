@@ -6,6 +6,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Test = lazy(() => import("./components/Test.jsx"));
 const Courses = lazy(() => import("./pages/Courses.jsx"));
 const CoursesDetails = lazy(() => import("./pages/CoursesDetails.jsx"));
+const CaseStudy = lazy(() => import("./pages/CaseStudy.jsx"));
 //
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="test" element={<Test />} />
+        <Route path="case" element={<CaseStudy />} />
         <Route path="courses" element={<Courses />} />
         <Route path="courses/:id" element={<CoursesDetails />} />
         <Route path="*" element={<Home />} />

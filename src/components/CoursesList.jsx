@@ -23,7 +23,11 @@ function CoursesList({ courses }) {
               <p className="font-semibold text-orange-500">{name}</p>
             </div>
             <div className="flex flex-col items-center mb-8">
-              <p className="text-sm text-orange-500">*{description}*</p>
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+                <p className="text-sm text-orange-500">{description}</p>
+                <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+              </div>
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-sm text-black-500 font-bold">
@@ -41,7 +45,7 @@ function CoursesList({ courses }) {
             </div>
             <div className="flex-grow" />
             <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
-              <button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
+              <button className="bg-orange-500 hover:bg-blue-700 text-black font-bold py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się wiecej
                 <ArrowRight className="w-12 h-12" />
               </button>

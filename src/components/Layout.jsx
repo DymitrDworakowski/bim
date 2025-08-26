@@ -21,18 +21,19 @@ function Layout() {
     <div>
       <nav>
         <div className="flex md:flex-row p-8 justify-evenly border-b-2 border-orange-500 items-end">
-          <NavLink to="/" end >
+          <NavLink to="/" end>
             <img src={imgBim} alt="BIM" width={400} height={90} />
           </NavLink>
           <h1 className="uppercase text-orange-500 font-bold text-4xl self-end">
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-orange-500 flex justify-center flex-col md:flex-row gap-5  p-4 ">
+        <div className=" uppercase text-orange-500 flex justify-evenly flex-col md:flex-row text-3xl p-4 ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
           <StyledLink to="/courses">Szkolenia</StyledLink>
+          <StyledLink to="/case">CaseStudy</StyledLink>
           <StyledLink to="/test">Test</StyledLink>
         </div>
       </nav>

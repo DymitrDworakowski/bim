@@ -14,57 +14,54 @@ const products = [
 // Створи новий масив, де до кожного товару додане поле inStock: true.
 
 function Test() {
-const [produ, setProdu] = useState(products)
+  const [produ, setProdu] = useState(products);
 
+  function deleteItems(id) {
+    const prod = produ.filter((p) => p.id !== id);
+    setProdu(prod);
+  }
 
-function deleteItems(id) {
-    const prod = produ.filter(p => p.id !== id)
-    setProdu(prod)
-}
-
-
-function addPrice(id) {
-const prod = produ.map(p =>{
-    
-    if(p.id === id){
+  function addPrice(id) {
+    const prod = produ.map((p) => {
+      if (p.id === id) {
         return {
-            ...p,
-            price: p.price * 1.1 ,
-        } 
-        } else {
-            
-            return p;
-        
-    }
-    
-})
-setProdu(prod)
-}
+          ...p,
+          price: p.price * 1.1,
+        };
+      } else {
+        return p;
+      }
+    });
+    setProdu(prod);
+  }
 
-function addInStock(id) {
-    const prod = produ.map(p =>{
-        
-        if(p.id === id){
-            return {
-                ...p,
-                inStock: true ,
-            } 
-            } else {
-                
-                return {
-                ...p,
-                inStock: false ,
-            };
-            
-        }
-        
-    })
-    setProdu(prod)
-    }
-console.log(produ)
+  function addInStock(id) {
+    const prod = produ.map((p) => {
+      if (p.id === id) {
+        return {
+          ...p,
+          inStock: true,
+        };
+      } else {
+        return {
+          ...p,
+          inStock: false,
+        };
+      }
+    });
+    setProdu(prod);
+  }
+
   return (
     <>
       <h1>Product</h1>
+      <div>
+        <h1 className="font-poppins text-3xl font-bold text-blue-600">
+          Це Poppins
+        </h1>
+        <p className="font-montserrat text-gray-700">Це Montserrat</p>
+      </div>
+
       {produ.map((pro) => (
         <ul>
           <h4 key={pro.id}>{pro.name}</h4>
@@ -73,10 +70,9 @@ console.log(produ)
           <button onClick={() => deleteItems(pro.id)}>Delete</button>
           <input type="checkbox" onClick={() => addInStock(pro.id)} />
         </ul>
-        
       ))}
-      
-{/* <div class="text-xl font-bold text-blue-600">Привіт, Tailwind!</div>
+
+      {/* <div class="text-xl font-bold text-blue-600">Привіт, Tailwind!</div>
 
 
 <div class="p-4 m-2">Контент з відступами</div>
@@ -110,9 +106,6 @@ console.log(produ)
   );
 }
 
-
-
-
 // const Test = () => {
 //   const source = "http://media.w3.org/2010/05/sintel/trailer.mp4";
 //   const playerRef = useRef();
@@ -133,4 +126,3 @@ console.log(produ)
 // };
 
 export default Test;
-
