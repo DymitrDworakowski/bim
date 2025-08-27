@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/bim/static/css/main.2d73b588.css",
-    "main.js": "/bim/static/js/main.bd8f0900.js",
+    "main.css": "/bim/static/css/main.7b134c84.css",
+    "main.js": "/bim/static/js/main.4a86219e.js",
     "static/js/264.5845ed1e.chunk.js": "/bim/static/js/264.5845ed1e.chunk.js",
-    "static/js/411.fb1f437a.chunk.js": "/bim/static/js/411.fb1f437a.chunk.js",
-    "static/js/693.c28b49f8.chunk.js": "/bim/static/js/693.c28b49f8.chunk.js",
+    "static/js/411.c4c19839.chunk.js": "/bim/static/js/411.c4c19839.chunk.js",
+    "static/js/693.0ec5693f.chunk.js": "/bim/static/js/693.0ec5693f.chunk.js",
     "static/js/391.c8104f3d.chunk.js": "/bim/static/js/391.c8104f3d.chunk.js",
     "static/js/994.07818a15.chunk.js": "/bim/static/js/994.07818a15.chunk.js",
     "static/js/892.e76f2100.chunk.js": "/bim/static/js/892.e76f2100.chunk.js",
     "static/media/LOGO.png": "/bim/static/media/LOGO.3b7600ad9d0191cd0ad9.png",
     "index.html": "/bim/index.html",
     "static/media/Strzalka.svg": "/bim/static/media/Strzalka.c3ae6562a46409318409740f99a281ec.svg",
-    "main.2d73b588.css.map": "/bim/static/css/main.2d73b588.css.map",
-    "main.bd8f0900.js.map": "/bim/static/js/main.bd8f0900.js.map",
+    "main.7b134c84.css.map": "/bim/static/css/main.7b134c84.css.map",
+    "main.4a86219e.js.map": "/bim/static/js/main.4a86219e.js.map",
     "264.5845ed1e.chunk.js.map": "/bim/static/js/264.5845ed1e.chunk.js.map",
-    "411.fb1f437a.chunk.js.map": "/bim/static/js/411.fb1f437a.chunk.js.map",
-    "693.c28b49f8.chunk.js.map": "/bim/static/js/693.c28b49f8.chunk.js.map",
+    "411.c4c19839.chunk.js.map": "/bim/static/js/411.c4c19839.chunk.js.map",
+    "693.0ec5693f.chunk.js.map": "/bim/static/js/693.0ec5693f.chunk.js.map",
     "391.c8104f3d.chunk.js.map": "/bim/static/js/391.c8104f3d.chunk.js.map",
     "994.07818a15.chunk.js.map": "/bim/static/js/994.07818a15.chunk.js.map",
     "892.e76f2100.chunk.js.map": "/bim/static/js/892.e76f2100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d73b588.css",
-    "static/js/main.bd8f0900.js"
+    "static/css/main.7b134c84.css",
+    "static/js/main.4a86219e.js"
   ]
 }
