@@ -20,15 +20,15 @@ function Layout() {
   return (
     <div>
       <nav>
-        <div className="flex md:flex-row gap-3 p-3 justify-evenly border-b-2 border-[rgb(250,150,0)] items-end">
+        <div className="flex md:flex-row gap-3 p-3  justify-evenly border-b-2 border-[rgb(250,150,0)] items-end ">
           <NavLink to="/" end>
-            <img src={imgBim} alt="BIM" width={400} height={90} />
+            <img src={imgBim} alt="BIM " width={390} height={80} className="mb-1.5" />
           </NavLink>
-          <h1 className="uppercase text-[rgb(250,150,0)]  text-4xl self-end">
+          <h1 className="uppercase text-[rgb(250,150,0)]  text-4xl self-end ">
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl gap-3 p-4 ">
+        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl gap-3 p-4  ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
