@@ -18,9 +18,17 @@ function CoursesList({ courses }) {
             key={id}
             className="uppercase border border-black p-4 rounded-lg hover:bg-orange-50 transition-colors flex flex-col w-full min-h-[400px] h-full"
           >
-            <div className="flex flex-row gap-1 mb-4 mt-4 justify-evenly ">
-              <img src={Logo} alt="BIM" width={100} height={90} className="mt-auto" />
-              <p className="font-semibold text-[rgb(250,150,0)] mt-auto">{name}</p>
+            <div className="flex flex-row gap-2 mb-4 mt-4 items-center ">
+              <img
+                src={Logo}
+                alt="BIM"
+                width={100}
+                height={90}
+                className="mb-2"
+              />
+              <p className="font-semibold text-[rgb(250,150,0)] pt-2">
+                {name}
+              </p>
             </div>
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-center gap-3">
@@ -31,21 +39,33 @@ function CoursesList({ courses }) {
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-sm text-black-500 font-bold">
-                Forma szkolenia: <span className="text-[rgb(250,150,0)] font-normal">{form}</span>
+                Forma szkolenia:{" "}
+                <span className="text-[rgb(250,150,0)] font-normal">
+                  {form}
+                </span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Termin: <span className="text-[rgb(250,150,0)] font-normal">{date}</span>
+                Termin:{" "}
+                <span className="text-[rgb(250,150,0)] font-normal">
+                  {date}
+                </span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Czas trwania: <span className="text-[rgb(250,150,0)] font-normal">{hours}</span>
+                Czas trwania:{" "}
+                <span className="text-[rgb(250,150,0)] font-normal">
+                  {hours}
+                </span>
               </p>
               <p className="text-sm text-black-500 font-bold">
-                Cena: <span className="text-[rgb(250,150,0)] font-normal">{price} PLN</span>
+                Cena:{" "}
+                <span className="text-[rgb(250,150,0)] font-normal">
+                  {price} PLN
+                </span>
               </p>
             </div>
             <div className="flex-grow" />
             <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
-              <button className="uppercase  hover:bg-[rgb(250,150,0)] text-black font-normal py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
+              <button className="uppercase border border-black hover:bg-[rgb(250,150,0)] text-black font-normal py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się wiecej
                 <ArrowRight className="w-12 h-12" />
               </button>

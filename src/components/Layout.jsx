@@ -18,17 +18,17 @@ const StyledLink = styled(NavLink)`
 
 function Layout() {
   return (
-    <div>
+    <div >
       <nav>
         <div className="flex md:flex-row gap-3 p-3  justify-evenly border-b-2 border-[rgb(250,150,0)] items-end ">
           <NavLink to="/" end>
-            <img src={imgBim} alt="BIM " width={390} height={80} className="mb-1.5" />
+            <img src={imgBim} alt="BIM " width={390} height={80} className="mb-1.5 mr-4 " />
           </NavLink>
-          <h1 className="uppercase text-[rgb(250,150,0)]  text-4xl self-end ">
+          <h1 className="uppercase text-[rgb(250,150,0)] md:text-4xl text-2xl  ml-4">
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row text-3xl gap-3 p-4  ">
+        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row md:text-3xl gap-3 p-4  ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
@@ -39,7 +39,7 @@ function Layout() {
       </nav>
       <section className="p-4 md:p-8 lg:p-12">
         <Suspense fallback={<div>Loading...</div>}>
-          <Outlet />
+          <Outlet/>
         </Suspense>
       </section>
       <Footer />
