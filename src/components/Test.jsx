@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 // import { useRef } from "react";
 const products = [
   { id: 1, name: "Bread", price: 10 },
@@ -16,6 +16,7 @@ const products = [
 
 function Test() {
   const [produ, setProdu] = useState(products);
+  const [vis, setVis] = useState(false);
 
   function deleteItems(id) {
     const prod = produ.filter((p) => p.id !== id);
@@ -53,38 +54,94 @@ function Test() {
     setProdu(prod);
   }
 
-  const Input = styled.input`
-  position: relative;
-  left: 13px;
-  top: 10px;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  transition:
-  transform 0.3s ease,color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
-
-  &:focus{
-  transform: translateY(-20px);
-  color: orange;}
-
-  &focus: {
-    color: orange;
-`;
-
-  const Label = styled.label`
-    &:focus {
-      transform: translateY(-20px);
-      color: orange;
+  function visible() {
+    if (!vis) {
+      setVis(true);
+    } else {
+      setVis(false);
     }
-  `;
+  }
+
+//   const Input = styled.input`
+//   position: relative;
+//   left: 13px;
+//   top: 10px;
+//   padding: 10px;
+//   margin-bottom: 20px;
+//   font-size: 16px;
+//   transition:
+//   transform 0.3s ease,color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
+
+//   &:focus{
+//   transform: translateY(-20px);
+//   color: orange;}
+
+//   &focus: {
+//     color: orange;
+// `;
+
+//   const Label = styled.label`
+//     &:focus {
+//       transform: translateY(-20px);
+//       color: orange;
+//     }
+//   `;
 
   return (
     <>
-      <Label htmlFor="\">
+      {/* <Label htmlFor="\">
         <Input type="text" placeholder="First name" />
-      </Label>
+      </Label> */}
+      {!vis ? (
+        <p>
+          {" "}
+          <p className="text-gray-700 sticky border border-black overflow-hidden text-lg leading-relaxed w-48 h-32">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+            sunt excepturi nesciunt iusto dignissimos assumenda ab quae
+            cupiditate a, sed reprehenderit? Deleniti optio quasi, amet natus
+            reiciendis atque fuga dolore? Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Impedit suscipit quisquam incidunt
+            commodi fugiat aliquam praesentium ipsum quos unde voluptatum?
+          </p>
+          <button
+            onClick={visible}
+            className="border border-black hover:border-blue-500 p-5 "
+          >
+            Show
+          </button>
+        </p>
+      ) : (
+        <p className="text-gray-700 sticky border border-black overflow-visible text-lg leading-relaxed w-48 h-auto">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+          sunt excepturi nesciunt iusto dignissimos assumenda ab quae cupiditate
+          a, sed reprehenderit? Deleniti optio quasi, amet natus reiciendis
+          atque fuga dolore? Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Impedit suscipit quisquam incidunt commodi fugiat aliquam
+          praesentium ipsum quos unde voluptatum?
+          <button
+            onClick={visible}
+            className="border border-black bg-blue p-5 "
+          >
+            {vis ? "Hide" : "Show"}
+          </button>
+        </p>
+      )}
 
       <h1>Product</h1>
+
+      
+<div class="relative group inline-block">
+  <button class="bg-blue-500 text-white px-4 py-2 rounded">
+    Меню
+  </button>
+
+  {/* <div class="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-lg p-4 z-10">
+    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 1</a>
+    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 2</a>
+    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 3</a>
+  </div> */}
+</div>
+
       {/* <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
 <div className="text-[#fa9600]">Фон помаранчевим кольором</div>
 <div className="border border-custom-orange">Рамка помаранчевим кольором</div>

@@ -1,24 +1,17 @@
-// import useState from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../images/SVG/Strzalka.svg";
 import Logo from "../images/logoCourse.png";
 
 function CoursesList({ courses }) {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // function modalOpen() {
-  //   setIsOpen(true);
-  // }
-
   return (
-    <div className="mx-auto p-8 mt-8">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
+    <div className=" py-8">
+      <ul className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-center max-w-[80%]  mx-auto">
         {courses.map(({ id, name, description, price, date, hours, form }) => (
           <li
             key={id}
-            className="uppercase border border-black p-4 rounded-lg hover:bg-orange-50 transition-colors flex flex-col w-full min-h-[400px] h-full"
+            className="uppercase border border-black p-4 rounded-lg hover:bg-orange-50 transition-colors flex flex-col w-full max-w-[360px] mx-auto min-h-[400px]"
           >
-            <div className="flex flex-row gap-2 mb-4 mt-4 items-center ">
+            <div className="flex flex-row gap-2 mb-4 mt-4 justify-center">
               <img
                 src={Logo}
                 alt="BIM"
@@ -67,7 +60,7 @@ function CoursesList({ courses }) {
             <Link to={`${id}`} className="flex justify-center pt-12 mt-auto">
               <button className="uppercase border border-black hover:bg-[rgb(250,150,0)] text-black font-normal py-1 px-6 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się wiecej
-                <ArrowRight className="w-12 h-12" />
+                <ArrowRight className="w-6 h-6" />
               </button>
             </Link>
           </li>

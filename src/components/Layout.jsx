@@ -11,24 +11,30 @@ const StyledLink = styled(NavLink)`
     font-weight: bold;
     color: orange;
   }
-  &:hover {
-    text-shadow: 0 2px 8px rgba(250, 150, 0, 0.7);
-  }
+  // &:hover {
+  //   text-shadow: 0 2px 8px rgba(250, 150, 0, 0.7);
+  // }
 `;
 
 function Layout() {
   return (
-    <div >
-      <nav>
-        <div className="flex md:flex-row gap-3 p-3  justify-evenly border-b-2 border-[rgb(250,150,0)] items-end ">
+    <div className="flex flex-col min-h-screen justify-center">
+      <nav className=" pt-4">
+        <div className="flex md:flex-row gap-4 p-1 justify-around border-b-2 border-[rgb(250,150,0)] items-end  ">
           <NavLink to="/" end>
-            <img src={imgBim} alt="BIM " width={390} height={80} className="mb-1.5 mr-4 " />
+            <img
+              src={imgBim}
+              alt="BIM "
+              width={390}
+              height={80}
+              className="mb-1.5  "
+            />
           </NavLink>
-          <h1 className="uppercase text-[rgb(250,150,0)] md:text-4xl text-2xl  ml-4">
+          <h1 className="uppercase text-[rgb(250,150,0)] md:text-4xl text-2xl px-auto ">
             Learn & Share
           </h1>
         </div>
-        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row md:text-3xl gap-3 p-4  ">
+        <div className=" uppercase text-[rgb(250,150,0)] flex justify-evenly flex-col md:flex-row md:text-3xl gap-0.2 p-4   ">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
@@ -37,9 +43,9 @@ function Layout() {
           <StyledLink to="/test">Test</StyledLink>
         </div>
       </nav>
-      <section className="p-4 md:p-8 lg:p-12">
+      <section>
         <Suspense fallback={<div>Loading...</div>}>
-          <Outlet/>
+          <Outlet />
         </Suspense>
       </section>
       <Footer />
