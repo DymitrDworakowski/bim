@@ -1,12 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import styled from "styled-components";
 import Footer from "./Footer.jsx";
 import imgBim from "../images/LOGO.png";
 
 const StyledLink = styled(NavLink)`
   color: black;
-
   text-align: justify;
 
   &.active {
@@ -19,6 +18,8 @@ const StyledLink = styled(NavLink)`
 `;
 
 function Layout() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen justify-between">
       <nav className=" pt-4  ">
@@ -37,7 +38,16 @@ function Layout() {
           </h1>
         </div>
         <div className="border-b-2 border-[rgb(250,150,0)] w-full" />
-        <div className=" uppercase text-[rgb(250,150,0)] max-w-5xl  md:text-3xl mt-6  px-1 flex justify-between mx-auto">
+
+        <button
+          className="md:hidden  text-[rgb(250,150,0)] text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
+        <div className=" uppercase text-[rgb(250,150,0)] max-w-5xl  md:text-3xl mt-6  px-1 hidden md:flex justify-between mx-auto">
           <StyledLink to="/" end>
             Strona główna
           </StyledLink>
@@ -45,6 +55,23 @@ function Layout() {
           <StyledLink to="/case">CaseStudy</StyledLink>
           <StyledLink to="/test">Test</StyledLink>
         </div>
+
+        {menuOpen && (
+          <div className="flex flex-col gap-4 p-4 md:hidden text-[rgb(250,150,0)] uppercase text-base font-medium">
+            <StyledLink to="/" end onClick={() => setMenuOpen(false)}>
+              Strona główna
+            </StyledLink>
+            <StyledLink to="/courses" onClick={() => setMenuOpen(false)}>
+              Szkolenia
+            </StyledLink>
+            <StyledLink to="/case" onClick={() => setMenuOpen(false)}>
+              Case Study
+            </StyledLink>
+            <StyledLink to="/test" onClick={() => setMenuOpen(false)}>
+              Test
+            </StyledLink>
+          </div>
+        )}
       </nav>
       <section className="px-1 flex justify-between mx-auto max-w-5xl">
         <Suspense fallback={<div>Loading...</div>}>
