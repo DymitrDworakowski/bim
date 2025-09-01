@@ -21,43 +21,35 @@ function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen justify-between">
-      <nav className=" pt-4  ">
-        <div className="flex md:flex-row gap-2 p-1 max-w-5xl mx-auto justify-between  items-end ">
+    <div className=" ">
+      <nav className="mt-4 mb-0  flex flex-row items-baseline justify-center mx-auto gap-2 w-full max-w-5xl ">
+        <div className="flex md:flex-col gap-2 py-2">
           <NavLink to="/" end>
-            <img
-              src={imgBim}
-              alt="BIM "
-              width={390}
-              height={80}
-              className="mb-1.5  "
-            />
+            <img src={imgBim} alt="BIM" width={300} height={80} />
           </NavLink>
-          <h1 className="uppercase text-[rgb(250,150,0)] md:text-4xl text-2xl px-auto   ">
+          <h1 className="uppercase text-[rgb(250,150,0)] md:text-2xl text-2xl px-auto">
             Learn & Share
           </h1>
         </div>
-        <div className="border-b-2 border-[rgb(250,150,0)] w-full" />
-
-        <button
-          className="md:hidden  text-[rgb(250,150,0)] text-3xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-
-        <div className=" uppercase text-[rgb(250,150,0)] max-w-5xl  md:text-3xl mt-6  px-1 hidden md:flex justify-between mx-auto">
-          <StyledLink to="/" end>
-            Strona główna
+        <div className="uppercase text-[rgb(250,150,0)] gap-11 md:text-xl mt-6 px-1 hidden md:flex ml-auto ">
+          <StyledLink to="/" end> 
+            Strona główna 
           </StyledLink>
           <StyledLink to="/courses">Szkolenia</StyledLink>
           <StyledLink to="/case">CaseStudy</StyledLink>
           <StyledLink to="/test">Test</StyledLink>
         </div>
 
+        <button
+          className="md:hidden text-[rgb(250,150,0)] text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+
         {menuOpen && (
-          <div className="flex flex-col gap-4 p-4 md:hidden text-[rgb(250,150,0)] uppercase text-base font-medium">
+          <div className="flex flex-col gap-4 p-4 md:hidden text-[rgb(250,150,0)] uppercase text-base font-medium ">
             <StyledLink to="/" end onClick={() => setMenuOpen(false)}>
               Strona główna
             </StyledLink>
@@ -72,8 +64,10 @@ function Layout() {
             </StyledLink>
           </div>
         )}
+        
       </nav>
-      <section className="px-1 flex justify-between mx-auto max-w-5xl">
+      <div className="border-b-2 border-[rgb(250,150,0)] w-full" /> 
+      <section className=" flex flex-col min-h-screen mx-auto max-w-5xl justify-between">
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>

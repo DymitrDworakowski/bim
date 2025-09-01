@@ -9,7 +9,7 @@ function CoursesList({ courses }) {
         {courses.map(({ id, name, description, price, date, hours, form }) => (
           <li
             key={id}
-            className="uppercase border border-black p-4 rounded-lg hover:bg-orange-50 transition-colors flex flex-col w-full max-w-[340px] mx-auto min-h-[400px] "
+            className="uppercase border border-black p-4 rounded-lg hover:bg-orange-50 transition-colors flex flex-col w-full max-w-[340px] mx-auto min-h-[300px] "
           >
             <div className="flex flex-row gap-2 mb-4 mt-4 justify-center items-center">
               <img
@@ -32,7 +32,7 @@ function CoursesList({ courses }) {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 text-sm">
+            <div className="flex flex-col gap-2 text-sm text-xs">
               <p className="font-bold">
                 Forma szkolenia:{" "}
                 <span className="text-[rgb(250,150,0)] font-normal">
@@ -62,7 +62,7 @@ function CoursesList({ courses }) {
             <div className="flex-grow" />
 
             <Link to={`${id}`} className="flex justify-center pt-8 mt-auto">
-              <button className="uppercase border border-black hover:bg-[rgb(250,150,0)] text-black font-normal py-1 px-4 rounded-lg shadow transition-colors flex items-center gap-2">
+              <button className="uppercase border border-black hover:bg-[rgb(250,150,0)] text-black font-bold text-xs py-1 px-4 rounded-lg shadow transition-colors flex items-center gap-2">
                 Dowiedz się więcej
                 <ArrowRight className="w-5 h-5" />
               </button>

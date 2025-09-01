@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import styled from "styled-components";
 // import { useRef } from "react";
 const products = [
@@ -62,33 +62,73 @@ function Test() {
     }
   }
 
-//   const Input = styled.input`
-//   position: relative;
-//   left: 13px;
-//   top: 10px;
-//   padding: 10px;
-//   margin-bottom: 20px;
-//   font-size: 16px;
-//   transition:
-//   transform 0.3s ease,color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
+  //   const Input = styled.input`
+  //   position: relative;
+  //   left: 13px;
+  //   top: 10px;
+  //   padding: 10px;
+  //   margin-bottom: 20px;
+  //   font-size: 16px;
+  //   transition:
+  //   transform 0.3s ease,color 0.3s ease,background-color 0.3s ease,border-color 0.3s ease;
 
-//   &:focus{
-//   transform: translateY(-20px);
-//   color: orange;}
+  //   &:focus{
+  //   transform: translateY(-20px);
+  //   color: orange;}
 
-//   &focus: {
-//     color: orange;
-// `;
+  //   &focus: {
+  //     color: orange;
+  // `;
 
-//   const Label = styled.label`
-//     &:focus {
-//       transform: translateY(-20px);
-//       color: orange;
-//     }
-//   `;
+  //   const Label = styled.label`
+  //     &:focus {
+  //       transform: translateY(-20px);
+  //       color: orange;
+  //     }
+  //   `;
+
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const d = new Date();
+
+  console.log(month[d.getMonth()]);
+  let time = `${d.toLocaleDateString()}. ${d.toLocaleTimeString()}`;
+ const nowDate = d.toLocaleDateString();
+  const [day, setDay] = useState(false);
+  const publicate = "2.09.2025";
+  useEffect(() => {
+    // Порівнюємо тільки дату (без секунд/мілісекунд)
+    let text = d.toLocaleString();
+    console.log(text);
+    const targetDate = new Date(publicate).toLocaleDateString();
+  const alreadyCelebrated = localStorage.getItem('birthdayCelebrated');
+  console.log(alreadyCelebrated);
+    if (nowDate === publicate) {
+      setDay(true);
+      localStorage.setItem('birthdayCelebrated', 'true');
+    }
+  }, [publicate]);
+
+  // console.log(time);
+
+  console.log(day);
 
   return (
     <>
+      {day && <h1>Today is my birthday</h1>}
+
       {/* <Label htmlFor="\">
         <Input type="text" placeholder="First name" />
       </Label> */}
@@ -129,26 +169,9 @@ function Test() {
 
       <h1>Product</h1>
 
-      
-<div class="relative group inline-block">
-  <button class="bg-blue-500 text-white px-4 py-2 rounded">
-    Меню
-  </button>
-
-  {/* <div class="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-lg p-4 z-10">
-    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 1</a>
-    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 2</a>
-    <a href="#" class="block px-2 py-1 hover:bg-gray-200">Пункт 3</a>
-  </div> */}
-</div>
-
-      {/* <div className="text-[rgb(250,150,0)]">Текст помаранчевим кольором</div>
-<div className="text-[#fa9600]">Фон помаранчевим кольором</div>
-<div className="border border-custom-orange">Рамка помаранчевим кольором</div>
-<div className="text-custom-orange">Текст з напівпрозорим кольором</div>
-<div className="text-red-500 bg-blue-200 p-4">
-    Тест стандартних кольорів Tailwind
-</div> */}
+      <div class="relative group inline-block">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">Меню</button>
+      </div>
 
       {produ.map((pro) => (
         <ul>
@@ -159,37 +182,6 @@ function Test() {
           <input type="checkbox" onClick={() => addInStock(pro.id)} />
         </ul>
       ))}
-
-      {/* <div class="text-xl font-bold text-blue-600">Привіт, Tailwind!</div>
-
-
-<div class="p-4 m-2">Контент з відступами</div>
-
-
-<div class="bg-gray-100">Сірий фон</div>
-
-
-<div class="border border-red-500 rounded-lg">Рамка</div>
-
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  Клікни мене
-</button>
-<div class="max-w-sm rounded overflow-hidden shadow-lg p-4">
-    <div class="font-bold text-xl mb-2">Заголовок картки</div>
-    <p class="text-gray-700 text-base">
-        Опис картки з основним текстом...
-    </p>
-</div>
-<nav class="flex flex-col md:flex-row gap-4 bg-gray-800 p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-white text-xl font-bold">Мій сайт</a>
-        <div class="space-x-4">
-            <a href="#" class="text-white hover:text-gray-300">Головна</a>
-            <a href="#" class="text-white hover:text-gray-300">Про нас</a>
-            <a href="#" class="text-white hover:text-gray-300">Контакти</a>
-        </div>
-    </div>
-</nav> */}
     </>
   );
 }

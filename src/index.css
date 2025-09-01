@@ -9,11 +9,6 @@ body {
   background: #f9fafb;
   color: #222;
 }
-* {
-  box-sizing: border-box;
-}
-
-
 a {
   text-decoration: none;
 }
