@@ -38,6 +38,7 @@ function Layout() {
           <StyledLink to="/courses">Szkolenia</StyledLink>
           <StyledLink to="/case">CaseStudy</StyledLink>
           <StyledLink to="/test">Test</StyledLink>
+          <StyledLink to="/blog">Blog</StyledLink>
         </div>
 
         <button
@@ -61,6 +62,9 @@ function Layout() {
             </StyledLink>
             <StyledLink to="/test" onClick={() => setMenuOpen(false)}>
               Test
+            </StyledLink>
+            <StyledLink to="/blog" onClick={() => setMenuOpen(false)}>
+              Blog
             </StyledLink>
           </div>
         )}
