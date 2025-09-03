@@ -1,27 +1,40 @@
 {
   "files": {
-    "main.css": "/bim/static/css/main.64e16643.css",
-    "main.js": "/bim/static/js/main.00401ff3.js",
+    "main.css": "/bim/static/css/main.7b134c84.css",
+    "main.js": "/bim/static/js/main.91145e73.js",
     "static/js/264.5845ed1e.chunk.js": "/bim/static/js/264.5845ed1e.chunk.js",
-    "static/js/411.96336d53.chunk.js": "/bim/static/js/411.96336d53.chunk.js",
-    "static/js/693.7127b4b3.chunk.js": "/bim/static/js/693.7127b4b3.chunk.js",
+    "static/js/411.4421d29b.chunk.js": "/bim/static/js/411.4421d29b.chunk.js",
+    "static/js/693.6b5c8506.chunk.js": "/bim/static/js/693.6b5c8506.chunk.js",
     "static/js/391.c8104f3d.chunk.js": "/bim/static/js/391.c8104f3d.chunk.js",
     "static/js/994.07818a15.chunk.js": "/bim/static/js/994.07818a15.chunk.js",
+    "static/js/63.40f83670.chunk.js": "/bim/static/js/63.40f83670.chunk.js",
+    "static/js/597.b4d34853.chunk.js": "/bim/static/js/597.b4d34853.chunk.js",
+    "static/js/387.d6773eb2.chunk.js": "/bim/static/js/387.d6773eb2.chunk.js",
+    "static/js/722.4400db37.chunk.js": "/bim/static/js/722.4400db37.chunk.js",
     "static/js/892.e76f2100.chunk.js": "/bim/static/js/892.e76f2100.chunk.js",
+    "static/js/532.36fab8e2.chunk.js": "/bim/static/js/532.36fab8e2.chunk.js",
     "static/media/LOGO.png": "/bim/static/media/LOGO.3b7600ad9d0191cd0ad9.png",
+    "static/media/linkedin.svg": "/bim/static/media/linkedin.cbd44c6b10b24faa22f1045865368dc0.svg",
     "index.html": "/bim/index.html",
+    "static/media/phone.svg": "/bim/static/media/phone.784e220f26920a9b604521354e7cd097.svg",
+    "static/media/emailIcon.svg": "/bim/static/media/emailIcon.4aea3fadcfd66083c2d347aa47928751.svg",
     "static/media/Strzalka.svg": "/bim/static/media/Strzalka.c3ae6562a46409318409740f99a281ec.svg",
-    "main.64e16643.css.map": "/bim/static/css/main.64e16643.css.map",
-    "main.00401ff3.js.map": "/bim/static/js/main.00401ff3.js.map",
+    "main.7b134c84.css.map": "/bim/static/css/main.7b134c84.css.map",
+    "main.91145e73.js.map": "/bim/static/js/main.91145e73.js.map",
     "264.5845ed1e.chunk.js.map": "/bim/static/js/264.5845ed1e.chunk.js.map",
-    "411.96336d53.chunk.js.map": "/bim/static/js/411.96336d53.chunk.js.map",
-    "693.7127b4b3.chunk.js.map": "/bim/static/js/693.7127b4b3.chunk.js.map",
+    "411.4421d29b.chunk.js.map": "/bim/static/js/411.4421d29b.chunk.js.map",
+    "693.6b5c8506.chunk.js.map": "/bim/static/js/693.6b5c8506.chunk.js.map",
     "391.c8104f3d.chunk.js.map": "/bim/static/js/391.c8104f3d.chunk.js.map",
     "994.07818a15.chunk.js.map": "/bim/static/js/994.07818a15.chunk.js.map",
-    "892.e76f2100.chunk.js.map": "/bim/static/js/892.e76f2100.chunk.js.map"
+    "63.40f83670.chunk.js.map": "/bim/static/js/63.40f83670.chunk.js.map",
+    "597.b4d34853.chunk.js.map": "/bim/static/js/597.b4d34853.chunk.js.map",
+    "387.d6773eb2.chunk.js.map": "/bim/static/js/387.d6773eb2.chunk.js.map",
+    "722.4400db37.chunk.js.map": "/bim/static/js/722.4400db37.chunk.js.map",
+    "892.e76f2100.chunk.js.map": "/bim/static/js/892.e76f2100.chunk.js.map",
+    "532.36fab8e2.chunk.js.map": "/bim/static/js/532.36fab8e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64e16643.css",
-    "static/js/main.00401ff3.js"
+    "static/css/main.7b134c84.css",
+    "static/js/main.91145e73.js"
   ]
 }
