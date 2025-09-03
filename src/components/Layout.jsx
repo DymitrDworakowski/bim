@@ -37,7 +37,7 @@ function Layout() {
           </StyledLink>
           <StyledLink to="/courses">Szkolenia</StyledLink>
           <StyledLink to="/case">CaseStudy</StyledLink>
-          <StyledLink to="/test">Test</StyledLink>
+          {/* <StyledLink to="/test">Test</StyledLink> */}
           <StyledLink to="/blog">Blog</StyledLink>
         </div>
 
@@ -60,9 +60,9 @@ function Layout() {
             <StyledLink to="/case" onClick={() => setMenuOpen(false)}>
               Case Study
             </StyledLink>
-            <StyledLink to="/test" onClick={() => setMenuOpen(false)}>
+            {/* <StyledLink to="/test" onClick={() => setMenuOpen(false)}>
               Test
-            </StyledLink>
+            </StyledLink> */}
             <StyledLink to="/blog" onClick={() => setMenuOpen(false)}>
               Blog
             </StyledLink>
