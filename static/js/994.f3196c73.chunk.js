@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbim=self.webpackChunkbim||[]).push([[994],{4994:(e,s,t)=>{t.r(s),t.d(s,{default:()=>i});var a=t(579);const i=function(e){let{id:s}=e;return(0,a.jsxs)("div",{className:"p-8",children:[(0,a.jsxs)("h2",{className:"text-2xl font-bold mb-4",children:["Case Study ",s]}),(0,a.jsxs)("p",{children:["This is a detailed case study for the course with ID: ",s,". Here you can add more information about the course, its objectives, outcomes, and any other relevant details."]})]})}}}]);
+//# sourceMappingURL=994.f3196c73.chunk.js.map
