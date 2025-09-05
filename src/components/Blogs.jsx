@@ -31,7 +31,7 @@ function Blogs() {
             </div>
             
             <div className="text-sm text-gray-600 border-t pt-3">
-              <p>Data publikacji: {new Date(blog.publishDate || blog.createdAt).toLocaleDateString('pl-PL')}</p>
+              <p>Data publikacji: {new Date(blog.publishDate).toLocaleDateString('pl-PL')}</p>
               <small>Autor: {blog.author || "Admin"}</small>
             </div>
           </div>
