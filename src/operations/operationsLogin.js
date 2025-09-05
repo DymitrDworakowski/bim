@@ -71,7 +71,6 @@ export const getBlog = async (id) => {
 
 // POST новий блог
 export const createBlog = async ({ title, content }, token) => {
-  console.log(title, content);
   const res = await api.post(
     "/blog",
     { title, content }, // ✅ правильна структура

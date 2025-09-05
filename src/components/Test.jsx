@@ -8,6 +8,7 @@ const products = [
   { id: 4, name: "Meat", price: 20 },
 ];
 
+
 // Зроби новий масив, де ціна кожного товару збільшена на 10%.
 
 // Зроби масив тільки з назв (["Bread", "Milk", "Cheese"]).
@@ -185,6 +186,7 @@ function Test() {
     </>
   );
 }
+
 
 // const Test = () => {
 //   const source = "http://media.w3.org/2010/05/sintel/trailer.mp4";

@@ -8,5 +8,6 @@ export const api = axios.create({
 // GET всі блоги
 export const getBlogs = async () => {
   const { data } = await api.get("/blog");
+  console.log(data)
   return data;
 };

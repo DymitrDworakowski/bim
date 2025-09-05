@@ -1,5 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import {
   getBlogs,
   createBlog,
@@ -14,12 +15,14 @@ function AdminBlogs() {
   const queryClient = useQueryClient();
   const token = localStorage.getItem("token");
 
+  // LogOut
+
   const handleLogout = async () => {
     try {
       if (token) {
         await logout(token);
       }
-      navigate("/"); // редірект на сторінку логіну
+      navigate("/");
     } catch (err) {
       console.error("Logout failed:", err);
     }
@@ -36,11 +39,19 @@ function AdminBlogs() {
 
   // ➕ додавання
   const [newBlog, setNewBlog] = useState({ title: "", content: "" });
+
+  const validateForm = () => {
+    if (newBlog.title.length < 3) toast.error("Nazwa za krótka");
+    else if (newBlog.content.length < 20) toast.error("Kontentu zbyt mało");
+    createMutation.mutate(newBlog);
+  };
+
   const createMutation = useMutation({
     mutationFn: (payload) => createBlog(payload, token),
     onSuccess: () => {
       queryClient.invalidateQueries(["blogs"]);
       setNewBlog({ title: "", content: "" });
+      toast.success("Nowy blog dodany!");
     },
   });
 
@@ -66,15 +77,19 @@ function AdminBlogs() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-4">📑 Paneł zarządzania blogiem</h1>
+      <div>
+        <Toaster />
+      </div>
 
       {/* Форма для створення */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          createMutation.mutate(newBlog);
+          validateForm();
         }}
         className="flex flex-col gap-2 bg-white p-4 rounded shadow-md mb-6"
       >
+        <p>Nazwa blogu</p>
         <input
           type="text"
           placeholder="Nazwa"
@@ -83,6 +98,7 @@ function AdminBlogs() {
           className="border p-2 rounded"
           required
         />
+        <p>Treść blogu</p>
         <textarea
           placeholder="Napisz tu kontent"
           value={newBlog.content}
