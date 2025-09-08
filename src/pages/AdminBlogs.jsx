@@ -113,7 +113,12 @@ function AdminBlogs() {
 
   const handleEditClick = (blog) => {
     setEditingBlog(blog._id);
-    setEditData({ title: blog.title, content: blog.content });
+    setEditData({
+      title: blog.title,
+      content: blog.content,
+      publishDate: blog.publishDate,
+      isPublished: blog.isPublished,
+    });
   };
 
   if (isLoading) return <p>Loading...</p>;
