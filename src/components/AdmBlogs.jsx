@@ -1,5 +1,6 @@
 import MDEditor from "@uiw/react-md-editor";
 import { Toaster } from "react-hot-toast";
+import MarkdownEditorWithImages from "../components/MarkdownEditorWithImages";
 function AdmBlogs({
   handleLogout,
   blogs,
@@ -42,6 +43,7 @@ function AdmBlogs({
         />
 
         <MDEditor
+        className="bg-blue"
           value={newBlog.content}
           onChange={(value) => setNewBlog({ ...newBlog, content: value || "" })}
           height={300}
