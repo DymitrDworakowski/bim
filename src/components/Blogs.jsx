@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getBlogs } from "../operations/operations";
+import { fetchPublicBlogs } from "../operations/operations";
 import Markdown from "markdown-to-jsx";
 
 function Blogs() {
@@ -9,23 +9,18 @@ function Blogs() {
     error,
   } = useQuery({
     queryKey: ["blogs"],
-    queryFn: getBlogs,
+    queryFn: fetchPublicBlogs,
   });
 
   if (isLoading) return <p>Ładowanie...</p>;
   if (error) return <p>Błąd podczas ładowania blogów</p>;
-
-  // ✅ фільтруємо тільки опубліковані або з датою <= now
-  const visibleBlogs = blogs?.filter(
-    (blog) =>
-      blog.isPublished === true || new Date(blog.publishDate) <= new Date()
-  );
-
+console.log(blogs.map(b => ({title: b.title, publishDate: b.publishDate, isPublished: b.isPublished})));
   return (
     <div className="flex flex-col gap-4 justify-center bg-slate-200 p-4">
       <h1 className="text-2xl font-bold mb-4">Blogi</h1>
-      {visibleBlogs && visibleBlogs.length > 0 ? (
-        visibleBlogs.map((blog) => (
+      
+      {blogs && blogs.length > 0 ? (
+        blogs.map((blog) => (
           <div
             key={blog._id}
             className="blog-item bg-white p-6 rounded shadow-md"

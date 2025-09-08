@@ -36,6 +36,7 @@ function AdminBlogs() {
   } = useQuery({
     queryKey: ["adminBlogs"],
     queryFn: () => getAdminBlogs(token), // ⚡ адмінські блоги
+    
   });
 
   // ➕ додавання
@@ -68,6 +69,7 @@ function AdminBlogs() {
         isPublished: false,
       });
       toast.success("Nowy blog dodany!");
+      
     },
     onError: (error) => {
       toast.error("Błąd podczas dodawania bloga");
