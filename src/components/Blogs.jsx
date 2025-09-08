@@ -14,7 +14,7 @@ function Blogs() {
 
   if (isLoading) return <p>Ładowanie...</p>;
   if (error) return <p>Błąd podczas ładowania blogów</p>;
-console.log(blogs.map(b => ({title: b.title, publishDate: b.publishDate, isPublished: b.isPublished})));
+
   return (
     <div className="flex flex-col gap-4 justify-center bg-slate-200 p-4">
       <h1 className="text-2xl font-bold mb-4">Blogi</h1>

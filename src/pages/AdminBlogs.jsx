@@ -36,7 +36,6 @@ function AdminBlogs() {
   } = useQuery({
     queryKey: ["adminBlogs"],
     queryFn: () => getAdminBlogs(token), // ⚡ адмінські блоги
-    
   });
 
   // ➕ додавання
@@ -69,7 +68,6 @@ function AdminBlogs() {
         isPublished: false,
       });
       toast.success("Nowy blog dodany!");
-      
     },
     onError: (error) => {
       toast.error("Błąd podczas dodawania bloga");
@@ -92,7 +90,12 @@ function AdminBlogs() {
 
   // ✏️ редагування
   const [editingBlog, setEditingBlog] = useState(null);
-  const [editData, setEditData] = useState({ title: "", content: "" });
+  const [editData, setEditData] = useState({
+    title: "",
+    content: "",
+    publishDate: "",
+    isPublished: false,
+  });
 
   const updateMutation = useMutation({
     mutationFn: ({ id, data }) => updateBlog({ id, data, token }),

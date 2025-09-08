@@ -60,7 +60,19 @@ function AdmBlogs({
           }
           className="border p-2 rounded"
         />
-
+        <div className="mb-4 flex items-center gap-2">
+          <input
+            type="checkbox"
+            id="isPublished"
+            checked={newBlog.isPublished || false}
+            onChange={(e) =>
+              setNewBlog({ ...newBlog, isPublished: e.target.checked })
+            }
+          />
+          <label htmlFor="isPublished" className="text-sm">
+            Opublikowany
+          </label>
+        </div>
         <button
           type="submit"
           disabled={createMutation.isLoading}
@@ -122,7 +134,22 @@ function AdmBlogs({
                   }
                   className="border p-2 rounded"
                 />
-
+                <div className="mb-4 flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="editIsPublished"
+                    checked={editData.isPublished || false}
+                    onChange={(e) =>
+                      setEditData({
+                        ...editData,
+                        isPublished: e.target.checked,
+                      })
+                    }
+                  />
+                  <label htmlFor="editIsPublished" className="text-sm">
+                    Opublikowany
+                  </label>
+                </div>
                 <div className="flex gap-2">
                   <button
                     type="submit"
