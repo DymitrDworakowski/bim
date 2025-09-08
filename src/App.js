@@ -4,7 +4,6 @@ import Layout from "./components/Layout.jsx";
 import {jwtDecode} from "jwt-decode";
 
 const Home = lazy(() => import("./pages/Home"));
-const Test = lazy(() => import("./components/Test.jsx"));
 const Courses = lazy(() => import("./pages/Courses.jsx"));
 const CoursesDetails = lazy(() => import("./pages/CoursesDetails.jsx"));
 const CaseStudy = lazy(() => import("./pages/CaseStudy.jsx"));
@@ -28,7 +27,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="test" element={<Test />} />
         <Route path="admin" element={<AdminLogin />} />
         <Route
           path="/admin/blogs"

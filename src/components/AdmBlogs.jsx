@@ -1,6 +1,5 @@
 import MDEditor from "@uiw/react-md-editor";
 import { Toaster } from "react-hot-toast";
-import MarkdownEditorWithImages from "../components/MarkdownEditorWithImages";
 function AdmBlogs({
   handleLogout,
   blogs,
