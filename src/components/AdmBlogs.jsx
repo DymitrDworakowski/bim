@@ -15,6 +15,7 @@ function AdmBlogs({
   handleEditClick,
   setNewBlog,
 }) {
+  
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-4">📑 Panel zarządzania blogiem</h1>
@@ -42,7 +43,7 @@ function AdmBlogs({
         />
 
         <MDEditor
-        className="bg-blue"
+          className="bg-blue"
           value={newBlog.content}
           onChange={(value) => setNewBlog({ ...newBlog, content: value || "" })}
           height={300}
@@ -180,6 +181,16 @@ function AdmBlogs({
                 <small className="text-gray-500">
                   Autor: {blog.author || "Admin"}
                 </small>
+                <p>
+                  Data planowanej publikacji:{" "}
+                  {new Date(blog.publishDate).toLocaleDateString("pl-PL", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}{" "}
+                </p>
                 <div className="flex gap-2 mt-2">
                   <button
                     onClick={() => handleEditClick(blog)}

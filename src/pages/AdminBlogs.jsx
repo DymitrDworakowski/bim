@@ -42,8 +42,8 @@ function AdminBlogs() {
   const [newBlog, setNewBlog] = useState({
     title: "",
     content: "",
-    publishDate: new Date().toISOString(), // ⚡ можна одразу дати поле дати
-    isPublished: false, // ⚡ старт як чернетка
+    publishDate: "", // ⚡ можна одразу дати поле дати new Date().toISOString()
+    isPublished: false,
   });
 
   const validateForm = () => {
