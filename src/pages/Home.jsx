@@ -129,12 +129,9 @@ function Home() {
           BIM to standard w nowoczesnym budownictwie. Skontaktuj się z nami już
           dziś, a pomożemy Ci znaleźć najlepsze rozwiązanie dla Twoich wyzwań.
         </p>
-        <a
-          href="#"
-          className="px-6 py-3 rounded-xl bg-[rgb(250,150,0)] text-white font-semibold shadow-md hover:bg-orange-600 transition"
-        >
+        <button className="px-6 py-3 rounded-xl bg-[rgb(250,150,0)] text-white font-semibold shadow-md hover:bg-orange-600 transition">
           Umów bezpłatną konsultację
-        </a>
+        </button>
       </div>
     </div>
   );
