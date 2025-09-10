@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../images/SVG/Strzalka.svg";
 import Logo from "../images/logoCourse.png";
+import { motion } from "framer-motion";
 
 function CoursesList({ courses }) {
   return (
     <div className="py-8">
-      <ul className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 justify-center max-w-6xl mx-auto ">
+      <motion.ul
+        className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 justify-center max-w-6xl mx-auto "
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         {courses.map(({ id, name, description, price, date, hours, form }) => (
           <li
             key={id}
@@ -69,7 +74,7 @@ function CoursesList({ courses }) {
             </Link>
           </li>
         ))}
-      </ul>
+      </motion.ul>
     </div>
   );
 }
